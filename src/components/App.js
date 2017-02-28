@@ -8,6 +8,7 @@ import * as actions from '../actions/actions';
 
 //conponents
 import Board from '../components/Board';
+import Scoreboard from '../components/Scoreboard';
 
 //store
 import * as store from '../store/config';
@@ -48,6 +49,9 @@ class App extends Component {
               </ul>
             </div>
 
+          </div>
+          <div>
+            <Scoreboard />
           </div>
           <div className="container">
             <Board/>

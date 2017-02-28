@@ -25,3 +25,11 @@ export var reset = ()=>{
     type: 'RESET'
   }
 }
+
+export var addScore = (winningStatus, currentPlayerSymbol)=>{
+  return {
+    type:'ADD_SCORE',
+    winningStatus,
+    currentPlayerSymbol
+  }
+}

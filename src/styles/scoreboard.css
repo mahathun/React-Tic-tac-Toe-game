@@ -1,0 +1,19 @@
+.scoreboard{
+  height: 3rem;
+  background: #747577;
+  display: flex;
+
+  justify-content: flex-start;
+}
+.playerScoreboard{
+  background: rgba(190, 191, 194, 0.44);
+  width:100%;
+  /*border:.2rem solid #747577;*/
+  margin: .2rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: #EFEFD0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

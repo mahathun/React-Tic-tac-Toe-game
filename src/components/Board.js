@@ -13,8 +13,10 @@ import * as actions from '../actions/actions';
 class Board extends Component {
 
   onPlayAgain(){
-    var {dispatch} = this.props;
+    var {dispatch,winningStatus,currentPlayerSymbol} = this.props;
+    dispatch(actions.addScore(winningStatus, currentPlayerSymbol))
     dispatch(actions.reset());
+
   }
 
   render(){
@@ -48,5 +50,5 @@ class Board extends Component {
 }
 
 export default connect((state)=>{
-  return {board:state.board, winningStatus:state.winningStatus}
+  return {board:state.board, winningStatus:state.winningStatus,currentPlayerSymbol:state.currentPlayerSymbol}
 })(Board);

@@ -65,3 +65,24 @@ export var winningStatusReducer = (state = false, action)=>{
       return state;
   }
 }
+
+export var scoreReducer = (state = {player1:0,player2:0}, action)=>{
+  switch (action.type) {
+    case 'ADD_SCORE':
+      var score = {...state};
+      if(action.winningStatus==='won'){
+        //if plalyer one whos symbol is 'X' has won
+        //current player is not the player who made the last move
+        if(action.currentPlayerSymbol==='O'){
+          score.player1+=1;
+        }else if(action.currentPlayerSymbol==='X'){
+          score.player2+=1;
+        }
+      }
+
+      return score;
+    default:
+      return state;
+
+  }
+}

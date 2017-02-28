@@ -47,8 +47,10 @@
   align-content: stretch;
   display: flex;
   justify-content: center;
+
 }
 .app{
   display: flex;
   flex-direction: column;
+  position: relative;
 }
