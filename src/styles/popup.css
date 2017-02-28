@@ -1,0 +1,56 @@
+.popup{
+  width: 40%;
+  left: 30%;
+  background: #5595C6;
+  position: absolute;
+  border: .2rem solid #004E89;
+  opacity: .8;
+  border-radius: .3rem;
+  top:10%;
+  color: #ecf0f1;
+
+}
+
+.messageHeader{
+  min-height: 2rem;
+  background: #2D84C6;
+  text-align: center;
+  padding: .2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .2rem .2rem 0rem 0rem;
+}
+
+.messageBody{
+  padding: .5rem;
+}
+
+.messageFooter{
+  padding: .5rem;
+  display:flex;
+  justify-content: flex-end;
+}
+
+.messageFooter .button{
+  text-decoration: none;
+  margin:.3rem;
+  padding:.3rem;
+  background: #2D84C6;
+  border-radius: .3rem;
+  min-width: 2rem;
+  text-align: center;
+  color:#ecf0f1;
+}
+
+.messageFooter .button:hover{
+  background: #2980b9;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: show;
+}

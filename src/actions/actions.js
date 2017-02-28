@@ -19,3 +19,9 @@ export var win = (board)=>{
     board
   }
 }
+
+export var reset = ()=>{
+  return {
+    type: 'RESET'
+  }
+}

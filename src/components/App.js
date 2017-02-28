@@ -3,31 +3,33 @@ import logo from '../res/logo.svg';
 import '../styles/App.css';
 import watch from 'redux-watch';
 
+//actions
+import * as actions from '../actions/actions';
+
+//conponents
+import Board from '../components/Board';
+
 //store
 import * as store from '../store/config';
 import {Provider} from 'react-redux';
 
-//actions
-import * as actions from '../actions/actions';
-//game
 
+
+//initializing the store
 var appStore = store.configure({
   currentPlayerSymbol: 'X',
   board:['','','','','','','','',''],
-  winningStatus:false,
+  winningStatus: 'pending',
 });
 
 //watching for board changes
 var w = watch(appStore.getState, 'board');
-
 //check for a winning combination
 appStore.subscribe(w((newVal, oldVal, objectPath) => {
   appStore.dispatch(actions.win(newVal));
-  // admin.name changed from JP to JOE
 }))
 
-//conponents
-import Board from '../components/Board';
+
 
 class App extends Component {
   render() {
@@ -37,7 +39,7 @@ class App extends Component {
           <div className="nav-bar">
             <div className="nav-bar-brand">
               <img src={logo} className="App-logo" alt="logo" />
-              <h3>Welcome to Tic-Toc </h3><em> (developed using React)</em>
+              <h3>Welcome to Tic-Tac-Toe </h3><em> (developed using React)</em>
             </div>
             <div className="nav-bar-links-lis">
               <ul className="nav-bar-links-list">

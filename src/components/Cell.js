@@ -8,8 +8,8 @@ import * as actions from '../actions/actions'
 
 class Cell extends Component {
   onClick(e){
-    var {symbol,dispatch,dataId, currentPlayerSymbol, board, winningStatus} = this.props;
-    if(symbol==='' && !winningStatus){
+    var {symbol,dispatch,dataId, currentPlayerSymbol, winningStatus} = this.props;
+    if(symbol==='' && winningStatus ==='pending'){
       dispatch(actions.changeCell(dataId,currentPlayerSymbol));
       dispatch(actions.played(currentPlayerSymbol));
     }
@@ -19,7 +19,7 @@ class Cell extends Component {
   render(){
 
     return(
-      <div data={this.props.symbol} className="cell" onClick={this.onClick.bind(this)}>
+      <div data={this.props.symbol} className="cell" onClick={this.onClick.bind(this)} >
         {this.props.symbol}
       </div>
     );
@@ -29,7 +29,6 @@ class Cell extends Component {
 export default connect((state)=>{
   return {
     currentPlayerSymbol: state.currentPlayerSymbol,
-    board:state.board,
     winningStatus:state.winningStatus
   }
 })(Cell);
