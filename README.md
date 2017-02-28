@@ -5,7 +5,7 @@
 - [Start the game](#start-the-game)
 - [Run tests](#run-tests)
 - [Deployment](#deployment)
-  - [Heroku](#)
+  - [Heroku](#heroku)
 
 ## Screenshots
 
@@ -26,5 +26,5 @@ To run the test suit, run following command in the terminal
 
 still under development
 
-# Heroku
+### Heroku
 project will be uploaded to the heroku once finished and will display link here
