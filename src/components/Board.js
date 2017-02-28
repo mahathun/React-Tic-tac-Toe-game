@@ -12,6 +12,7 @@ class Board extends Component {
 
   render(){
 
+    //console.log('winningStatus: ',this.props.winningStatus);
     return(
     <div className="tic-toc">
       <div className="side-space">
@@ -34,7 +35,7 @@ class Board extends Component {
 }
 
 export default connect((state)=>{
-  return {board:state.board}
+  return {board:state.board, winningStatus:state.winningStatus}
 })(Board);
 
 // export default connect((state)=>{

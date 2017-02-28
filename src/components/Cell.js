@@ -7,18 +7,9 @@ import '../styles/cell.css';
 import * as actions from '../actions/actions'
 
 class Cell extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name :'test',
-      age: 3
-    }
-  }
-
   onClick(e){
-    var {symbol,dispatch,dataId, currentPlayerSymbol} = this.props;
-    if(symbol===''){
-      console.log(dataId,symbol, currentPlayerSymbol);
+    var {symbol,dispatch,dataId, currentPlayerSymbol, board, winningStatus} = this.props;
+    if(symbol==='' && !winningStatus){
       dispatch(actions.changeCell(dataId,currentPlayerSymbol));
       dispatch(actions.played(currentPlayerSymbol));
     }
@@ -36,5 +27,9 @@ class Cell extends Component {
 }
 
 export default connect((state)=>{
-  return {currentPlayerSymbol: state.currentPlayerSymbol}
+  return {
+    currentPlayerSymbol: state.currentPlayerSymbol,
+    board:state.board,
+    winningStatus:state.winningStatus
+  }
 })(Cell);

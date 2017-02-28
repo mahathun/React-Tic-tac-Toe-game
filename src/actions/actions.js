@@ -9,6 +9,13 @@ export var changeCell = (id,symbol)=>{
 export var played = (currentPlayerSymbol)=>{
   return {
     type: 'PLAYED',
-    currentPlayerSymbol
+    currentPlayerSymbol,
+  }
+}
+
+export var win = (board)=>{
+  return {
+    type: 'WIN',
+    board
   }
 }
