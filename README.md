@@ -1,6 +1,6 @@
 
 ## Table of Contents
-
+- [Demo](#demo)
 - [Screenshots](#screenshots)
 - [Start the game](#start-the-game)
 - [Run tests](#run-tests)
@@ -8,9 +8,14 @@
   - [GitHub Pages](#github-pages)
   - [Heroku](#heroku)
 
+## Demo
+
+- [GitHub Page demo - https://mahathun.github.io/React-Tic-tac-Toe-game/](https://mahathun.github.io/React-Tic-tac-Toe-game/)
+- [Heroku demo - https://dan-tic-tac-toe.herokuapp.com/](https://dan-tic-tac-toe.herokuapp.com/)
+
 ## Screenshots
 
-screenshots goes here
+![screenshot](https://thumbs.gfycat.com/GlamorousFearlessHuman-size_restricted.gif)
 
 ## Start the game
 
@@ -27,9 +32,13 @@ To run the test suit, run following command in the terminal
 
 still under development
 ### GitHub Pages
-you can see a working demo of the project from the following link which is hosted as a GitHub Pages
-[Demo](https://mahathun.github.io/React-Tic-tac-Toe-game/)
+To deploy this project to github run
+`npm run depoly`
+
+-[Demo](https://mahathun.github.io/React-Tic-tac-Toe-game/)
 
 ### Heroku
-you can see a working demo of the project from the following link which is hosted in heroku
-[Demo](https://dan-tic-tac-toe.herokuapp.com/)
+To deploy this project to heroku, run
+`git push heroku master`
+
+-[Demo](https://dan-tic-tac-toe.herokuapp.com/)
