@@ -5,6 +5,7 @@
 - [Start the game](#start-the-game)
 - [Run tests](#run-tests)
 - [Deployment](#deployment)
+  - [GitHub Pages](#github-pages)
   - [Heroku](#heroku)
 
 ## Screenshots
@@ -25,6 +26,10 @@ To run the test suit, run following command in the terminal
 ## Deployment
 
 still under development
+### GitHub Pages
+you can see a working demo of the project from the following link which is hosted as a GitHub Pages
+[Demo](https://mahathun.github.io/React-Tic-tac-Toe-game/)
 
 ### Heroku
-project will be uploaded to the heroku once finished and will display link here
+you can see a working demo of the project from the following link which is hosted in heroku
+[Demo](https://dan-tic-tac-toe.herokuapp.com/)
